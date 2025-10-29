@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoo Ticket Purchase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f8f8;
+        }
+        h1 {
+            text-align: center;
+            color: #2d6a4f;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #2d6a4f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #40916c;
+        }
+        .ticket-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .payment-options label {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Zoo Ticket Purchase</h1>
+
+    <form id="zooTicketForm" action="#" method="POST">
+        <!-- Ticket Date -->
+        <div class="form-group">
+            <label for="visitDate">Select Visit Date:</label>
+            <input type="date" id="visitDate" name="visitDate" required>
+        </div>
+
+        <!-- Ticket Types and Quantity -->
+        <div class="form-group">
+            <label for="tickets">Choose Your Tickets:</label>
+            <div class="ticket-options">
+                <label>
+                    Adult Ticket ($20):
+                    <input type="number" id="adultTicket" name="adultTicket" min="0" placeholder="Quantity">
+                </label>
+                <label>
+                    Child Ticket ($10):
+                    <input type="number" id="childTicket" name="childTicket" min="0" placeholder="Quantity">
+                </label>
+                <label>
+                    Senior Ticket ($15):
+                    <input type="number" id="seniorTicket" name="seniorTicket" min="0" placeholder="Quantity">
+                </label>
+                <label>
+                    Family Pass ($50):
+                    <input type="number" id="familyPass" name="familyPass" min="0" placeholder="Quantity">
+                </label>
+            </div>
+        </div>
+
+        <!-- Promo Code -->
+        <div class="form-group">
+            <label for="promoCode">Enter Promo Code:</label>
+            <input type="text" id="promoCode" name="promoCode" placeholder="Promo Code (Optional)">
+        </div>
+        
+        <!-- Payment Options -->
+        <div class="form-group">
+            <label>Select Payment Method:</label>
+            <div class="payment-options">
+                <label>
+                    <input type="radio" name="paymentMethod" value="Credit Card" required> Credit Card
+                </label>
+                <label>
+                    <input type="radio" name="paymentMethod" value="PayPal"> PayPal
+                </label>
+                <label>
+                    <input type="radio" name="paymentMethod" value="Google Pay"> Google Pay
+                </label>
+                <label>
+                    <input type="radio" name="paymentMethod" value="Apple Pay"> Apple Pay
+                </label>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+            <button type="submit">Proceed to Payment</button>
+        </div>
+    </form>
+
+</body>
+</html>
