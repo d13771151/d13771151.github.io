@@ -1,125 +1,283 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoo Ticket Purchase</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f8f8f8;
-        }
-        h1 {
-            text-align: center;
-            color: #2d6a4f;
-        }
-        form {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        input, select, button {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #cccccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #2d6a4f;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #40916c;
-        }
-        .ticket-options {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-        .payment-options label {
-            display: inline-block;
-        }
-    </style>
+        <title>Хаус-бот</title>
+        <meta charset="UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Keywords" content="">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <!-- Bootstrap CSS (Cloudflare CDN) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <!-- jQuery (Cloudflare CDN) -->
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Bootstrap Bundle JS (Cloudflare CDN) -->
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+
 <body>
 
-    <h1>Zoo Ticket Purchase</h1>
+        <!-- Header -->
 
-    <form id="zooTicketForm" action="#" method="POST">
-        <!-- Ticket Date -->
-        <div class="form-group">
-            <label for="visitDate">Select Visit Date:</label>
-            <input type="date" id="visitDate" name="visitDate" required>
+        <header class="header">
+                <div class="container">
+                        <div class="header__row">
+                                <a href="#">
+                                     <img src="./assets/img/hboat.png" class="header__logo" alt="logo">  
+					    <!--      --> 
+                                </a>
+                                <div class="header__column menu-header">
+                                        <div class="menu-header__icon">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                        </div>
+                                </div>
+                                <nav class="menu-header__menu">
+                                        <ul class="menu-header__list">
+                                                <li class="menu-header__item">
+                                                        <a class="menu-header__link" href="#a1">Хаусбот</a>
+                                                </li>
+                                                <li class="menu-header__item">
+                                                        <a class="menu-header__link" href="#a2">Акватории</a>
+                                                </li>
+                                                <li class="menu-header__item">
+                                                        <a class="menu-header__link" href="#a3">Аренда</a>
+                                                </li>
+                                                 <li class="menu-header__item">
+                                                        <a class="menu-header__link" href="#a4">Стоимость</a>
+                                                </li>                                               
+						<li class="menu-header__item">
+                                                        <a class="menu-header__link2" href="tel:+375295042417">+375(29)504-24-17</a>
+                                                        <a class="menu-header__link2" href="tel:+375297708505">+375(29)770-85-05</a>
+                                                </li>
+                                        </ul>
+                                </nav>
+                        </div>
+                </div>
+        </header>
+
+
+        <!-- Intro -->
+
+        <section class="intro">
+                <div class="container">
+                        <div class="intro__content">
+                                <h1 class="intro__title title">Хаусбот - это отдых для тех, кто ищет что-то большее, чем просто домик на берегу...
+                                </h1>
+                                <a class="intro__text"  href="https://www.youtube.com/watch?v=QXaCal-9IXM">Мне интересно!</a>
+                        </div>
+                </div>
+        </section>
+
+        <!-- Why -->
+
+        <section class="why">
+                <div class="container">
+                        <div class="why__row">
+                                <div class="why__item">
+                                        <a id="a1"></a>
+                                        <p class="why__question">ОПИСАНИЕ</p>
+                                        <h2 class="why__title title__why">Аренда хаусбота - это лучший выбор для романтического, семейного отдыха или встречи с друзьями.</h2>
+                                        <p class="why__text">Мы предлагаем вам в аренду плавучий дом с внутренней площадью 20 м2. Общий размер 10,5х2,5 метра. 
+                                                Спущен на воду в 2022 году.
+                                                Максимальная вместимость во время плавания на борту составляет 8 человек, имеется 5 спальных мест (2+2+1). 
+                                                На хаусботе есть 2 раздельные каюты. Одна из них - гостиная с удобной кухней. Имеются холодильник, газовая плита, раковина, горячее водоснабжение и кухонные принадлежности.
+                                                В каютах установлены розетки 220 В.
+                                                Есть санузел с душем (горячая/холодная вода), шкаф для одежды. 
+                                                На кормовой площадке: удобный спуск для купания. На носовой террасе: мангал и летний стол.</p>
+                                        <a class="why__link link" href="https://www.youtube.com/watch?v=JbSXmF5xjAo&t=5s">Откройте для себя комфортный отдых на борту хаусбота!</a>
+                                </div>
+                                <div class="why__image">
+                                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                                <ol class="carousel-indicators">
+                                                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                                </ol>
+                                                <div class="carousel-inner">
+                                                  <div class="carousel-item active">
+                                                    <img class="d-block w-100" src="assets/img/salon.jpg" alt="Первый слайд">
+                                                  </div>
+                                                  <div class="carousel-item">
+                                                    <img class="d-block w-100" src="assets/img/salon4.JPG" alt="Второй слайд">
+                                                  </div>
+                                                  <div class="carousel-item">
+                                                    <img class="d-block w-100" src="assets/img/salon3.jpg" alt="Третий слайд">
+                                                  </div>
+                                                  <div class="carousel-item">
+                                                     <img class="d-block w-100" src="assets/img/salon5.jpg" alt="Четвертый слайд">
+                                                  </div>
+                                                  <div class="carousel-item">
+                                                     <img class="d-block w-100" src="assets/img/salon6.jpg" alt="Пятый слайд">
+                                                  </div>
+                                                  <div class="carousel-item">
+                                                        <img class="d-block w-100" src="assets/img/salon2.JPG" alt="Шестой слайд">
+                                                  </div>
+                                                  <div class="carousel-item">
+                                                        <img class="d-block w-100" src="assets/img/salon7.jpg" alt="Седьмой слайд">
+                                                  </div>
+                                                  <!-- <div class="carousel-item">
+                                                        <img class="d-block w-100" src="assets/img/salon2.JPG" alt="Шестой слайд">
+                                                  </div> -->
+                                                </div>
+                                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                  <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                  <span class="sr-only">Next</span>
+                                                </a>
+                                         </div>
+                                        <!-- <img class="why__img" src="./assets/img/salon.jpg" alt="graph"> -->
+                                </div>
+                        </div>
+                </div>
+        </section>
+
+
+
+        <!-- Brings -->
+
+        <div class="brings">
+                <div class="container">
+                        <div class="brings__row">
+                                <div class="brings__item">
+                                        <p class="brings__subtitle">САМ СЕБЕ КАПИТАН</p>
+                                        <ul class="brings__list">
+                                                <li class="brings__text">Вы будете капитаном на борту хаус-бота! Лодочные или яхтенные права не требуются!</li>
+                                                <li class="brings__text">Вы сможете самостоятельно управлять хаусботом после инструктажа.</li>
+                                                <li class="brings__text">Вы можете ходить по мелководьям и останавливаться в любом понравившимся месте. </li>
+                                                <!-- <li class="brings__text">Хаусбот не предназначен для движения, при скорости ветра более 4-х метров в секунду.</li> -->
+                                        </ul>
+                                        <p class="brings__p"><b>Хаусбот не предназначен для движения, при скорости ветра 4 и более метров в секунду!</b></p>
+                                </div>
+                                <div class="brings__content">
+                                        <p class="brings__subtitle2">ЭКОЛОГИЧНОСТЬ</p>
+                                        <p class="brings__description">Хаусбот оснащен солнечными панелями. </p>
+                                        <p class="brings__description">Современный электрический мотор не наносит вред окружающей среде.</p>
+                                        <p class="brings__description">Отходы и отработанная вода собираются в специальные баки.</p>
+                                        <p class="brings__description">Стацинарный мангал позволяет приготовить еду по-туристически, не разводя костер на берегу.</p>
+
+                                </div>
+                        </div>
+                </div>
         </div>
 
-        <!-- Ticket Types and Quantity -->
-        <div class="form-group">
-            <label for="tickets">Choose Your Tickets:</label>
-            <div class="ticket-options">
-                <label>
-                    Adult Ticket ($20):
-                    <input type="number" id="adultTicket" name="adultTicket" min="0" placeholder="Quantity">
-                </label>
-                <label>
-                    Child Ticket ($10):
-                    <input type="number" id="childTicket" name="childTicket" min="0" placeholder="Quantity">
-                </label>
-                <label>
-                    Senior Ticket ($15):
-                    <input type="number" id="seniorTicket" name="seniorTicket" min="0" placeholder="Quantity">
-                </label>
-                <label>
-                    Family Pass ($50):
-                    <input type="number" id="familyPass" name="familyPass" min="0" placeholder="Quantity">
-                </label>
-            </div>
+        <!-- Video -->
+
+        <section class="video">
+                <div class="container">
+                        <a id="a2"></a>
+                        <div class="video__row">
+                                <div class="video__image">
+                                        <img class="video__img" src="./assets/img/sea.jpg" alt="sea">
+                                </div>
+                                <div class="video__item">
+                                        <p class="video__subtitle">Акватории</p>
+                                        <h3 class="video__title title">Мы предлагаем аренду хаусбота на следующих водоемах</h3>
+                                                <li class="video__list"><B>Браславские озера (с 10 июня)</b></li>
+                                                <li class="video__list">Заславское водохранилище (с 1 октября и до конца сезона)</li>
+                                                <li class="video__list3">Озеро Селява</li>
+                                        <a class="video__text " href="https://www.youtube.com/watch?v=QXaCal-9IXM">Возможность аренды в нужные сроки  на конкретном  водоеме  необходимо  уточнять заранее.</a>
+                                </div>
+                        </div>
+                </div>
+        </section>
+
+
+
+        <!-- Employers -->
+
+        <div class="employers">
+                <div class="container">
+                        <a id="a3"></a>
+                        <div class="employers__item">
+                                <p class="employers__subtitle">Как арендовать</p>
+                                <h2 class="employers__title title">Чтобы арендовать хаусбот вам необходимо:</h2>
+                                <ul class="employers__ul">
+                                        <li class="employers__li">Позвонить нам по телефону  +375295042417  или +375297708505</li>
+                                        <li class="employers__li">После согласования сроков и акватории Вам необходимо заключить договор (нужен паспорт) и внести предоплату</li>
+                                </ul>
+                        </div>
+                </div>
         </div>
 
-        <!-- Promo Code -->
-        <div class="form-group">
-            <label for="promoCode">Enter Promo Code:</label>
-            <input type="text" id="promoCode" name="promoCode" placeholder="Promo Code (Optional)">
-        </div>
-        
-        <!-- Payment Options -->
-        <div class="form-group">
-            <label>Select Payment Method:</label>
-            <div class="payment-options">
-                <label>
-                    <input type="radio" name="paymentMethod" value="Credit Card" required> Credit Card
-                </label>
-                <label>
-                    <input type="radio" name="paymentMethod" value="PayPal"> PayPal
-                </label>
-                <label>
-                    <input type="radio" name="paymentMethod" value="Google Pay"> Google Pay
-                </label>
-                <label>
-                    <input type="radio" name="paymentMethod" value="Apple Pay"> Apple Pay
-                </label>
-            </div>
-        </div>
+        <!-- Brings -->
 
-        <!-- Submit Button -->
-        <div class="form-group">
-            <button type="submit">Proceed to Payment</button>
+        <div class="brings">
+                <div class="container">
+                        <div class="brings__prise">
+                                <div class="brings__item-prise">
+                                        <p class="brings__subtitle">В стоимость включено:</p>
+                                        <ul class="brings__list">
+                                                <li class="brings__text">Проживание в хаусботе </li>
+                                                <li class="brings__text">Питьевая вода 10л/сутки</li>
+                                                <li class="brings__text">Топливо для генератора  10л/сутки</li>
+                                                <li class="brings__text">Подушки, одеяла, постельное белье</li>
+						<li class="brings__text">Решётка, чайник, кухонная посуда</li>
+                                        </ul>
+                                        <!-- <p class="bring__description">Клиент вносит страховой залоговый депозит который возвращается в полном объеме если Хаус-бот возвращается без повреждений.</p> -->
+                                </div>
+                                <div class="bring__content">
+                                        <p class="brings__subtitle2">Услуги оплачиваемые отдельно:</p>
+                                        <p class="brings__description">Управление хаусбота шкипером </p>
+                                        <p class="brings__description">Животные на борту</p>
+                                        <p class="brings__description">Изменения в бронировании </p>
+                                        <p class="brings__description">Доставка хаусбота на определённое мето водоёма </p>
+                                        <p class="bring__description">Клиент вносит страховой залоговый депозит, который возвращается в полном объеме, если хаусбот возвращается без повреждений!</p>
+
+                                </div>
+                        </div>
+                </div>
         </div>
-    </form>
+       <section class="intro-last">
+                <div class="container">
+                        <a id="a4"></a>
+                        <div class="employers__item">
+                                <h2 class="employers__title title">Стоимость </h2>
+                              
+				<p class="employers__subtitle"><u> Цены на период с 10 Июня на Браславских озерах (Снуды, Струсто)</u><br><br>    Хаусбот сдается целиком, вне зависимости от количества человек. Заселение 12:00 возврат 10:00 </p>
+                                <ul class="employers__ul">
+                                        <li class="employers__li"><B>понедельник - пятница: </B></li>
+                                        <li class="employers__li">1 день - 600 BYN за сутки </li>
+					 <li class="employers__li">2 дня - 790 BYN </li>
+                                        <li class="employers__li">3 дня - 1160 BYN</li>
+					 <li class="employers__li">4 дня - 1500 BYN</li>
+					<li class="employers__li"><B>пятница - понедельник: </B></li>
+					 <li class="employers__li"> 1 день - 700 BYN </li>
+					 <li class="employers__li">2 дня - 990 BYN</li>
+					 <li class="employers__li">3 дня - 1450 BYN</li> 
+           <br> 
+					 <p class="employers__subtitle">На срок более 4-х дней существует система скидок </p><br>
+                                </ul>
+                        </div>
+
+
+                </div>
+        </section>
+        <!-- Footer -->
+
+        <footer class="footer">
+                <div class="container">
+                        <div class="footer-top">
+                                <div class="footer-top__item">
+                                        <a href="#">
+                                                <img src="./assets/img/boat.png" alt="logo" class="footer-top__logo">
+                                        </a>
+                                        <p class="footer-contact">Контакты:</p>
+                                        <div>
+                                        <ul class="footer-ul">
+                                                <li class="footer-li">+375295042417</li>
+                                                <li class="footer-li">+375297708505</li>
+                                        </ul>
+                                        </div>
+                                </div>
+                </div>
+        </footer>
 
 </body>
+
 </html>
